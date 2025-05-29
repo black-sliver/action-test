@@ -1,0 +1,14 @@
+# This workflow tests a trigger for releases
+
+name: Release Trigger Test
+
+on:
+  push:
+    tags:
+      - 'v?[0-9]+.[0-9]+.[0-9]*'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo did run
